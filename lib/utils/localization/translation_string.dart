@@ -12,6 +12,7 @@ class TranslationString extends Translations {
           'password': 'Password',
           'states' : 'States',
           'blogs' : 'Blogs',
+          'bookmark' : 'Bookmarks ',
         },
         'ne_NP': {
           'appName': 'होटल प्रशासक',
