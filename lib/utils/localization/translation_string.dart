@@ -26,6 +26,7 @@ class TranslationString extends Translations {
           'purchase' : 'Purchase this app',
           'logout' : 'Logout',
           'editProfile' : 'Edit Profile',
+          'bookmark' : 'Bookmarks ',
         },
         'ne_NP': {
           'appName': 'होटल प्रशासक',

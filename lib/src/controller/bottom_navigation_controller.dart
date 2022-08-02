@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hotel_mobile/src/views/account.dart';
+import 'package:hotel_mobile/src/views/home/home_page.dart';
 import 'package:hotel_mobile/src/views/states.dart';
 import 'package:hotel_mobile/utils/logs_toasts.dart';
-
 import '../views/blogs.dart';
+import '../views/bookmark.dart';
 import '../views/home.dart';
 
 class BottomNavigationController extends GetxController{
@@ -14,10 +15,10 @@ class BottomNavigationController extends GetxController{
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> widgetOptions = <Widget>[
-    Home(),
+     HomePage(),
     StatesScreen(),
     Blogs(),
-    Home(),
+    BookMarkScreen(),
     Account(),
   ];
 

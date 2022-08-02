@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hotel_mobile/utils/routes/app_routes.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../utils/app_colors.dart';
 import '../../utils/app_icons.dart';
@@ -24,7 +25,7 @@ class Account extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 8.0),
             child: GestureDetector(
-              onTap: () {},
+              onTap: () {Get.toNamed(AppRoutes.notification);},
               child: AppIcons.notification(),
             ),
           ),
