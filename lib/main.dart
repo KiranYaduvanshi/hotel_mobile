@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hotel_mobile/utils/app_colors.dart';
 import 'utils/localization/translation_string.dart';
 import 'utils/routes/app_pages.dart';
 
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Hotel Admin',
       theme: ThemeData(
+        scaffoldBackgroundColor: AppColors.scafoldBackground,
         primarySwatch: Colors.blue,
       ),
       initialRoute: AppPages.initialRoute,

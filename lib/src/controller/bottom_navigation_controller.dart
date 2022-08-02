@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hotel_mobile/src/views/account.dart';
 import 'package:hotel_mobile/src/views/states.dart';
 import 'package:hotel_mobile/utils/logs_toasts.dart';
 
@@ -9,13 +10,6 @@ import '../views/home.dart';
 class BottomNavigationController extends GetxController{
 
   DateTime? currentBackPressTime;
-  // List<Widget> _tabs = [
-  //   Home(),
-  //   Home(),
-  //   Home(),
-  //   Home(),
-  //   Home(),
-  // ];
   RxInt selectedIndex = 0.obs;
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
@@ -24,9 +18,15 @@ class BottomNavigationController extends GetxController{
     StatesScreen(),
     Blogs(),
     Home(),
-    Home(),
+    Account(),
   ];
 
+  @override
+  void onInit() {
+    super.onInit();
+  }
+
+  /*----------Back Press Function-------------*/
   Future<bool> onWillPop() {
     DateTime now = DateTime.now();
     if (currentBackPressTime == null ||
@@ -39,12 +39,8 @@ class BottomNavigationController extends GetxController{
     return Future.value(true);
   }
 
+  /*--------Switch Tabs---------*/
   void onItemTapped(int index) {
-      selectedIndex.value = index;
-
-  }
-  @override
-  void onInit() {
-    super.onInit();
+    selectedIndex.value = index;
   }
 }
