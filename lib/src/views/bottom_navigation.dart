@@ -21,11 +21,9 @@ class BottomNavigationScreen extends StatelessWidget {
       ),
       bottomNavigationBar:  Theme(
         data:  Theme.of(context).copyWith(
-          // sets the background color of the `BottomNavigationBar`
             canvasColor: Colors.white,
             splashFactory: InkRipple.splashFactory,
             splashColor: AppColors.lightPurple,
-            // sets the active color of the `BottomNavigationBar` if `Brightness` is light
             primaryColor: Colors.blue,
             textTheme: Theme
                 .of(context)

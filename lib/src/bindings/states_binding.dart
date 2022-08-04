@@ -6,5 +6,4 @@ class StatesBinding implements Bindings{
   void dependencies() {
     Get.lazyPut(() => StatesController());
   }
-
 }

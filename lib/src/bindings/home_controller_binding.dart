@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:hotel_mobile/src/controller/home_page/HomePageController.dart';
+import 'package:hotel_mobile/src/controller/HomePageController.dart';
 
 class HomeControllerBinding implements Bindings{
   @override
