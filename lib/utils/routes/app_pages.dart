@@ -2,23 +2,29 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hotel_mobile/src/bindings/bottom_navigation_binding.dart';
 import 'package:hotel_mobile/src/bindings/intro_screen_binding.dart';
+import 'package:hotel_mobile/src/bindings/nearby_places_binding.dart';
 import 'package:hotel_mobile/src/bindings/notification_binding.dart';
 import 'package:hotel_mobile/src/bindings/place_detail_binding.dart';
+import 'package:hotel_mobile/src/bindings/select_language_binding.dart';
 import 'package:hotel_mobile/src/views/bottom_navigation.dart';
+import 'package:hotel_mobile/src/views/home/nearby_places.dart';
 import 'package:hotel_mobile/src/views/notification/notification_detail.dart';
 import 'package:hotel_mobile/src/views/notification/notification_screen.dart';
 import 'package:hotel_mobile/src/views/place_detail/place_detail.dart';
 import 'package:hotel_mobile/src/views/intro_screens.dart';
 import 'package:hotel_mobile/src/views/photo_view_screen.dart';
+import 'package:hotel_mobile/src/views/search_place.dart';
+import 'package:hotel_mobile/src/views/select_language.dart';
 import 'package:hotel_mobile/src/views/user_reviews.dart';
 
+import '../../src/bindings/search_place_binding.dart';
 import '../../src/bindings/states_binding.dart';
 import '../../src/views/home.dart';
 import '../../src/views/states.dart';
 import 'app_routes.dart';
 
 class AppPages {
-  static String initialRoute = AppRoutes.userReview;
+  static String initialRoute = AppRoutes.selectLanguage;
   static final routes = [
     GetPage(
         name: AppRoutes.homePage,
@@ -62,7 +68,25 @@ class AppPages {
     GetPage(
       name: AppRoutes.userReview,
       page: () =>  UserReviewsScreen(),
+    ),
+    GetPage(
+      name: AppRoutes.searchPlace,
+      page: () =>  SearchPlace(),
+      binding: SearchPlaceBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.nearbyPlaces,
+      page: () =>  NearbyPlacesScreen(),
+      binding: NearbyPlacesBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.selectLanguage,
+      page: () =>  SelectLanguage(),
+      binding: SelectLanguageBinding(),
     )
+
+
+
 
 
   ];

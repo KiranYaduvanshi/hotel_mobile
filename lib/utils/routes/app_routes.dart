@@ -9,5 +9,8 @@ class AppRoutes {
   static String notification = "/notification";
   static String notificationDetail = "/notificationDetail";
   static String userReview = "/userReview";
+  static String searchPlace = "/searchPlace";
+  static String nearbyPlaces = "/nearbyPlaces";
+  static String selectLanguage = "/selectLanguage";
 
 }

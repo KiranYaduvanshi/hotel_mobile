@@ -5,7 +5,8 @@ import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 //--- HEADING ----
-Widget headingWidget(String title){
+Widget headingWidget(String title)
+{
   return                 Padding(
     padding: const EdgeInsets.all(8.0),
     child: Row(

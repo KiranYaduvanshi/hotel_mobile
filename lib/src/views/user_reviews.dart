@@ -22,6 +22,8 @@ class UserReviewsScreen extends StatelessWidget{
             child: SingleChildScrollView(
               child: Column(
                 children: [
+
+                  /*reviews list */
                   Container(
                     height: 800,
                     child:             ListView.builder(
@@ -36,14 +38,16 @@ class UserReviewsScreen extends StatelessWidget{
             ),
           ),
 
+          /* write review*/
           Container(
             height: 80,
             alignment: Alignment.center,
             color: Colors.white,
 
             child: Container(
+              height: 45,
               margin: EdgeInsets.only(top: 10,bottom: 10,left: 13,right: 13),
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.all(4),
               decoration: BoxDecoration(
                 color: Colors.grey.shade300,
                 boxShadow: [BoxShadow(
@@ -56,9 +60,22 @@ class UserReviewsScreen extends StatelessWidget{
               child:Padding(padding: const EdgeInsets.only(left: 10,right: 10),
                 child:Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text("ncddkcndjnfdj"),
-                    Icon(Icons.send)
+                  children:  [
+                  Container(
+                    width: 200,
+                    child: const TextField(
+                    textInputAction: TextInputAction.newline,
+                     keyboardType: TextInputType.multiline,
+                      maxLines: 10,
+                      minLines: 1,
+
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+
+                            hintText: "write review..."),
+                            ),
+                  ),
+                       Icon(Icons.send)
 
                   ],
                 ),
