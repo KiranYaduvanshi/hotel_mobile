@@ -5,9 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:hotel_mobile/utils/routes/app_routes.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../../controller/home_page/HomePageController.dart';
+import '../../controller/HomePageController.dart';
 import 'widget/home_widget_class.dart';
 import 'widget/search_widget.dart';
 
@@ -101,14 +102,20 @@ class HomePage extends StatelessWidget{
 
               headingWidget("Popular Places"),
 
+
                 Container(
                   height: 250,
                   child: ListView.builder(
                     itemCount: 5,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (BuildContext context , int index){
-                  return  popularPlaces("https://images.unsplash.com/photo-1517328894681-0f5dfabd463c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
-                      );
+                  return  GestureDetector(
+                    onTap: (){
+                      Get.toNamed(AppRoutes.placeDetail);
+                    },
+                    child: popularPlaces("https://images.unsplash.com/photo-1517328894681-0f5dfabd463c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+                        ),
+                  );
 
                   }),
                 ),
